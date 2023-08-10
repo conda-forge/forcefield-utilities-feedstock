@@ -1,11 +1,11 @@
-About forcefield-utilities
-==========================
+About forcefield-utilities-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/forcefield-utilities-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/mosdef-hub/forcefield-utilities
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/forcefield-utilities-feedstock/blob/main/LICENSE.txt)
 
 Summary: Utility functions and classes necessary to convert xml forcefields to foyer and gmso Forcefields
 

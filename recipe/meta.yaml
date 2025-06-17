@@ -21,7 +21,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - foyer
-    - gmso >=0.9.0
+    - gmso >=0.13
     - pydantic >=2
     - lxml
 

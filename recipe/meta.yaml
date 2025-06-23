@@ -11,17 +11,22 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: |
+    {{ PYTHON }} -m pip install . -vv
+    git clone https://github.com/mosdef-hub/gmso.git
+    cd gmso
+    {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
+    - foyer
+    - lxml
+    - pydantic >=2
   run:
     - python >={{ python_min }}
-    - foyer
-    - gmso >=0.12.4
     - pydantic >=2
     - lxml
 

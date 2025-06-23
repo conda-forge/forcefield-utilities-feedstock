@@ -1,5 +1,5 @@
 {% set name = "forcefield-utilities" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/forcefield-utilities/archive/{{ version }}.tar.gz
-  sha256: 1fa6e4e82e80fba2ed2c50064f54b4ae67917fb3743180db5d6fbd574e5cc56c
+  sha256: 27326ebf693ff9429f1543060d4548cbc4a4569e2c8c19b48953abafc7997072
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - foyer
-    - gmso >=0.9.0
+    - gmso >=0.13
     - pydantic >=2
     - lxml
 

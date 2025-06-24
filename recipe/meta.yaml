@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1 
+  number: 2 
 
 requirements:
   host:
@@ -22,18 +22,18 @@ requirements:
   run:
     - python >={{ python_min }}
     - foyer
-    - gmso <=0.13
+    - gmso >=0.13
     - pydantic >=2
     - lxml
 
-#test:
-#  imports:
-#    - forcefield_utilities
-#  requires:
-#    - pip
-#    - python {{ python_min }}
-#  commands:
-#    - pip check
+test:
+  imports:
+    - forcefield_utilities
+  requires:
+    - pip
+    - python {{ python_min }}
+  commands:
+    - pip check
 
 about:
   home: https://github.com/mosdef-hub/forcefield-utilities

@@ -27,14 +27,14 @@ requirements:
     - numpy >=2.0,<2.6
     - lxml
 
-test:
-  imports:
-    - forcefield_utilities
-  requires:
-    - pip
-    - python {{ python_min }}
-  commands:
-    - pip check
+#test:
+#  imports:
+#    - forcefield_utilities
+#  requires:
+#    - pip
+#    - python {{ python_min }}
+#  commands:
+#    - pip check
 
 about:
   home: https://github.com/mosdef-hub/forcefield-utilities

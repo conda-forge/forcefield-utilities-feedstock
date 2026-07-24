@@ -22,9 +22,9 @@ requirements:
   run:
     - python >={{ python_min }},<=3.14
     - foyer >=1.0
-    - gmso >=0.16.0
+    - gmso >=0.16.2
     - pydantic >=2
-    - numpy>=2.0,<2.6
+    - numpy >=2.0,<2.6
     - lxml
 
 test:

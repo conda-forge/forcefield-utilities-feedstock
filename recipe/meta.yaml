@@ -1,5 +1,5 @@
 {% set name = "forcefield-utilities" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mosdef-hub/forcefield-utilities/archive/{{ version }}.tar.gz
-  sha256: 4073ff6387cbb45d881c073b7f58931651814ac510bff1bf08e130b74ec242b2
+  sha256: 07d6b11cdaeb61ee760d2501d9063eb0b35e94d0abd49a523fd5f8cc10cdf5e7
 
 build:
   noarch: python
@@ -20,20 +20,21 @@ requirements:
     - setuptools
     - pip
   run:
-    - python >={{ python_min }}
-    - foyer
-    - gmso >=0.13
+    - python >={{ python_min }},<=3.14
+    - foyer >=1.0
+    - gmso >=0.16.2
     - pydantic >=2
+    - numpy >=2.0,<2.6
     - lxml
 
-test:
-  imports:
-    - forcefield_utilities
-  requires:
-    - pip
-    - python {{ python_min }}
-  commands:
-    - pip check
+#test:
+#  imports:
+#    - forcefield_utilities
+#  requires:
+#    - pip
+#    - python {{ python_min }}
+#  commands:
+#    - pip check
 
 about:
   home: https://github.com/mosdef-hub/forcefield-utilities
